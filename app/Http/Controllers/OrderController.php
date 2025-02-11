@@ -74,6 +74,7 @@ class OrderController extends Controller
         if ($response->successful()) {
             $biteshipData = $response->json();
 
+            $validated['user_id'] = Auth::user()->id;
             $validated['shipper_contact_name'] = Auth::user()->name;
             $order = Order::create($validated);
             $order->update([

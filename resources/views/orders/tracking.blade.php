@@ -15,7 +15,7 @@
                     @csrf
                     <div class="mb-3">
                         <label for="tracking_id" class="form-label">Tracking ID</label>
-                        <input type="text" class="form-control shadow-none @error('tracking_id') is-invalid @enderror" id="tracking_id" name="tracking_id" value="{{ $trackingId }}">
+                        <input type="text" class="form-control shadow-none @error('tracking_id') is-invalid @enderror" id="tracking_id" name="tracking_id">
                         @error('tracking_id')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
